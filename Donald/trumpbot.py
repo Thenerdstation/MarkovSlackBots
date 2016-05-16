@@ -1,9 +1,13 @@
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__)))
 from slackbot.bot import Bot
 from slackbot.bot import respond_to
 from slackbot.bot import listen_to
 import re
-from TheDonald import maga, random_word
+from Donald.TheDonald import maga
 import random
+
+
 height = 30
 @respond_to(".*")
 def hi(message):

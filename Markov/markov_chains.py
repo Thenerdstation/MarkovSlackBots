@@ -78,6 +78,7 @@ def train_chain_lines(file_name, chain_name):
     pickle.dump(markov_chain, chain_file)
     return markov_chain
     print "file dumped"
+
 def make_tweet(markov_chain, max_lenght=140):
     word = "___start___"
     sentence = ""
