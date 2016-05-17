@@ -4,6 +4,7 @@ import string
 import pickle
 import random 
 
+### Train a markov chain with data formatted in a csv from twitter###
 def train_chain_twitter(file_name, chain_name):
     tweets = open(file_name, 'r')
     reader = csv.DictReader(tweets)
@@ -42,6 +43,8 @@ def train_chain_twitter(file_name, chain_name):
     return markov_chain
     print "file dumped"
 
+
+### Train a markov chain with each line being a different "tweet"
 def train_chain_lines(file_name, chain_name):
     lines = open(file_name, 'r')
     markov_chain = {"___start___":{"___count___":0}}
@@ -102,6 +105,7 @@ def make_tweet(markov_chain, max_lenght=140):
                         return sentence[1:]
                     word = next_word
                     break
+
 if __name__ == '__main__':
     rick_chain = train_chain_lines("Rick/ricks_lines.txt", "rick_chain.pickel")
     make_tweet(rick_chain)
