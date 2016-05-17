@@ -7,10 +7,11 @@ import re
 from Donald.TheDonald import maga
 import random
 
+@listen_to(".+@trumpbot")
 @respond_to(".*")
 def hi(message):
     message.send(maga())
-    
+
 @respond_to(".*fuck.*")
 def fuckyou(message):
     message.send("Hey @dan_walker, go fuck yourself.")
