@@ -18,4 +18,4 @@ if __name__ == '__main__':
     #trump_chain = train_chain("realDonaldTrump_tweets.csv")
     file = open("./Donald/trump_chain.pickle", "r")
     markov_chain = pickle.load(file)
-   print make_tweet(markov_chain)
+    print make_tweet(markov_chain)
