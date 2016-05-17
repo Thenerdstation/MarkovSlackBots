@@ -12,7 +12,7 @@ import random
 def hi2(message):
     message.send(maga())
 
-@listen_to(".*rick.*")
+@listen_to(".*[R,r]ick.*")
 def mmmmorty(message):
     message.send(morty())
 
