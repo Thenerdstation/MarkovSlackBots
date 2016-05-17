@@ -7,7 +7,10 @@ import re
 from Donald.TheDonald import maga
 import random
 
-@listen_to(".+trumpbot")
+@listen_to(".+trumpbot.*")
+def hi2(message):
+    message.send(maga())
+
 @respond_to(".*")
 def hi(message):
     message.send(maga())
