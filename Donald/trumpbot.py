@@ -16,7 +16,6 @@ def hi(message):
     if num < .333:
         height +=10
         response = "Well that wall just got 10 feet higher. Current height of the wall is %d feet" % height
-        print response
         message.send(response)
     else:
         message.send(maga())
