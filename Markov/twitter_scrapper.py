@@ -1,4 +1,4 @@
-mport tweepy #https://github.com/tweepy/tweepy
+import tweepy #https://github.com/tweepy/tweepy
 import csv
 import re
 import string
