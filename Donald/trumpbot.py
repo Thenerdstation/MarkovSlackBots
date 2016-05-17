@@ -7,18 +7,10 @@ import re
 from Donald.TheDonald import maga
 import random
 
-
-height = 30
 @respond_to(".*")
 def hi(message):
-    global height
-    num = random.random()
-    if num < .333:
-        height +=10
-        response = "Well that wall just got 10 feet higher. Current height of the wall is %d feet" % height
-        message.send(response)
-    else:
-        message.send(maga())
+    message.send(maga())
+    
 @respond_to(".*fuck.*")
 def fuckyou(message):
     message.send("Hey @dan_walker, go fuck yourself.")

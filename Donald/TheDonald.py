@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+P#!/usr/bin/env python
 # encoding: utf-8
 
 import string
@@ -6,9 +6,11 @@ import pickle
 import random 
 from Markov.markov_chains import make_tweet
 
+file_name = 'trump_chain.pickel'
+file_path = os.path.join(os.path.dirname(__file__))
+file = open(file_path, "r")
 
 def maga():
-    file = open("trump_chain.pickle", "r")
     markov_chain = pickle.load(file)
     return make_tweet(markov_chain)
 

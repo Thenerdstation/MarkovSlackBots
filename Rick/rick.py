@@ -7,8 +7,9 @@ import random
 from Markov.markov_chains import make_tweet
 import os
 global rick_file_name, rick_file
+
 file_name = 'rick_chain.pickel'
-file_path = os.path.join(os.path.dirname(__file__)
+file_path = os.path.join(os.path.dirname(__file__))
 file = open(file_path, "r")
 
 def morty():
