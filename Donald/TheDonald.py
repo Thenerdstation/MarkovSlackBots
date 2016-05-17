@@ -5,6 +5,7 @@ import string
 import pickle
 import random 
 from Markov.markov_chains import make_tweet
+import os
 
 file_name = 'trump_chain.pickel'
 file_path = os.path.join(os.path.dirname(__file__))
