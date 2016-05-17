@@ -6,19 +6,19 @@ import pickle
 import random 
 from Markov.markov_chains import make_tweet
 import os
-global rick_file_name, rick_file
 
-file_name = 'rick_chain.pickel'
-file_path = os.path.join(os.path.dirname(file_name))
+### File path of your pickle ###
+file_name = 'Rick/rick_chain.pickle'
+
+
+global markov_chain
+file_path = os.path.join(os.path.realpath(file_name))
 file = open(file_path, "r")
+markov_chain = pickle.load(file)
 
 def morty():
-    markov_chain = pickle.load(file)
     return make_tweet(markov_chain)
 
 if __name__ == '__main__':
-    #pass in the username of the account you want to download
-    #get_all_tweets("realDonaldTrump")
-    #trump_chain = train_chain("realDonaldTrump_tweets.csv")
-    markov_chain = pickle.load(file)
+    #print a tweet for debugging
     print make_tweet(markov_chain)

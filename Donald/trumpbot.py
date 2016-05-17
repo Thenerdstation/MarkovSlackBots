@@ -5,11 +5,16 @@ from slackbot.bot import respond_to
 from slackbot.bot import listen_to
 import re
 from Donald.TheDonald import maga
+from Rick.rick import morty
 import random
 
 @listen_to(".*wall.*")
 def hi2(message):
     message.send(maga())
+
+@listen_to(".*rick.*")
+def mmmmorty(message):
+    message.send(morty())
 
 @respond_to(".*")
 def hi(message):
