@@ -7,18 +7,18 @@ import random
 from Markov.markov_chains import make_tweet
 import os
 
-file_name = 'trump_chain.pickel'
-file_path = os.path.join(os.path.dirname(__file__))
+### File path of your pickle ###
+file_name = 'Donald/trump_chain.pickle'
+
+
+global markov_chain
+file_path = os.path.join(os.path.realpath(file_name))
 file = open(file_path, "r")
+markov_chain = pickle.load(file)
 
 def maga():
-    markov_chain = pickle.load(file)
     return make_tweet(markov_chain)
 
 if __name__ == '__main__':
-    #pass in the username of the account you want to download
-    #get_all_tweets("realDonaldTrump")
-    #trump_chain = train_chain("realDonaldTrump_tweets.csv")
-    file = open("./Donald/trump_chain.pickle", "r")
-    markov_chain = pickle.load(file)
+    #print a tweet for debugging
     print make_tweet(markov_chain)
